@@ -1,2 +1,3 @@
-subject = ["matematicas", "ciencias", "Sociales", "Ingles"]
-print(subject)
+subjects = ["Matematicas", "Ciencias", "Sociales", "Ingles"]
+for subject in subjects:
+    print("Yo estudio " + subject)
