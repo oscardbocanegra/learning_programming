@@ -1,3 +1,7 @@
 <h1>Projects</h1>
 
-<p>This is the first conection of projects with our project Django</p>
+{% for project in projects %}
+
+<article>
+    <h1>{{project.name}}</h1>
+{% endfor %}

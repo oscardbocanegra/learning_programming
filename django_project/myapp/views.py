@@ -4,17 +4,31 @@ from django.shortcuts import render
 
 # Create your views here.
 def index (request):
-    return render(request, 'index.html')
+    title = 'Django course!!'
+    return render(request, 'index.html', {
+        'title' : title
+    })
+
 def hello(request, username):
     return HttpResponse("<h2>Hello %s</h2> " % username)
 
 def about(request):
-    return render(request, 'about.html')
+    username = 'Oscar Bocanegra'
+    return render(request, 'about.html',{
+        'username' : username
+    })
 
 def projects(request):
-    projects = list(Project.objects.values())
-    return render(request, 'projects.html')
+    # projects = list(Project.objects.values())
+    projects = Project.objects.all()
+    return render(request, 'projects.html', {
+        'projects' : projects
+    })
 
 def task(request):
     # task = Task.objects.get(tittle = tittle)
-    return render(request, 'task.html')
+    tasks = Task.objects.all()
+    return render(request, 'task.html', {
+        'tasks': tasks
+    })
+    

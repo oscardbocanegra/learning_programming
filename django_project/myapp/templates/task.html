@@ -1,2 +1,20 @@
 <h1>Task</h1>
 
+{% for task in tasks %}
+
+<div>
+
+    <h3> {{task.tittle}}</h3>
+    <p> {{task.description}} </p>
+    <p> Project: {{task.project.name}} </p>
+    <button>
+        Delete
+    </button>
+    <button>
+        Update
+    </button>
+</article>
+
+
+</div>
+{% endfor %}
