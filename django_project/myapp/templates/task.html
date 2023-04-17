@@ -1,22 +1,30 @@
-<h1>Task</h1>
+{%extends 'base.html'%}
 
-{% for task in tasks %}
+{% block content %}
 
-<div>
-    <h3>{% if task.done == False %} ⌛ {% else %} ✅ {% endif %}
-     {{task.tittle}}</h3>
+    <h1>Task</h1>
 
-    <p> {{task.description}} </p>
-    <p> Project: {{task.project.name}} </p>
+    {% for task in tasks %}
 
-    <button>
-        Delete
-    </button>
-    <button>
-        ✅ Done
-    </button>
-</article>
+    <div>
+        <h3>{% if task.done == False %} ⌛ {% else %} ✅ {% endif %}
+        {{task.tittle}}</h3>
+
+        <p> {{task.description}} </p>
+        <p> Project: {{task.project.name}} </p>
+
+        <button>
+            Delete
+        </button>
+        <button>
+            ✅ Done
+        </button>
+    </article>
 
 
-</div>
-{% endfor %}
+    </div>
+    {% endfor %}
+
+{% endblock  %}
+
+

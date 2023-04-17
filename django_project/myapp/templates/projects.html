@@ -1,7 +1,13 @@
-<h1>Projects</h1>
+{%extends 'base.html'%}
 
-{% for project in projects %}
+{% block content %}
 
-<article>
-    <h1>{{project.name}}</h1>
-{% endfor %}
+    <h1>Projects</h1>
+
+    {% for project in projects %}
+
+    <article>
+        <h1>{{project.name}}</h1>
+    {% endfor %}
+
+{%endblock%}

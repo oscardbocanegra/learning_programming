@@ -1,5 +1,11 @@
-<h1>About</h1>
+{%extends 'base.html'%}
 
-<p>This is the first conection of about with our project Django</p>
+{% block content %}
 
-<p>Website created by {{ username }}</p>
+    <h1>About</h1>
+
+    <p>This is the first conection of about with our project Django</p>
+
+    <p>Website created by {{ username }}</p>
+
+{% endblock  %}
