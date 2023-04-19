@@ -1,25 +1,41 @@
-<nav>
-    <ul>
-        <li>
-            <a href = "/">Home</a>
-        </li>
-        <li>
-            <a href = "{%url 'projects'%}">Projects</a>
-        </li>
-        <li>
-            <a href = "{%url 'tasks'%}">Task</a>
-        </li>
-        <li>
-            <a href = "{%url 'about'%}">About</a>
-        </li>
-        <li>
-            <a href = "{%url 'create_task'%}">Create task</a>
-        </li>
-        <li>
-            <a href = "{%url 'create_project'%}">Create Project</a>
-        </li>
-    </ul>
-</nav>
+{% load static %}
 
-{% block content %}   
-{% endblock  %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Django projects</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static './styles/main.css'%}">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href = "/">Home</a>
+                </li>
+                <li>
+                    <a href = "{%url 'projects'%}">Projects</a>
+                </li>
+                <li>
+                    <a href = "{%url 'tasks'%}">Task</a>
+                </li>
+                <li>
+                    <a href = "{%url 'about'%}">About</a>
+                </li>
+                <li>
+                    <a href = "{%url 'create_task'%}">Create task</a>
+                </li>
+                <li>
+                    <a href = "{%url 'create_project'%}">Create Project</a>
+                </li>
+            </ul>
+        </nav>
+        
+        {% block content %}   
+        {% endblock  %}
+        <script src="" async defer></script>
+    </body>
+</html>

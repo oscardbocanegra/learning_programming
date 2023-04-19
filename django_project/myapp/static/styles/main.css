@@ -1,0 +1,23 @@
+body{
+    background: #202020;
+    color: whitesmoke;
+}
+
+.navbar{
+    background: #404040;
+    padding: 5px 10px;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar ul li a{
+    color: white;
+}
