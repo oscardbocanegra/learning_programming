@@ -7,8 +7,8 @@
     {% for task in tasks %}
 
     <div>
-        <h3>{% if task.done == False %} ⌛ {% else %} ✅ {% endif %}
-        {{task.tittle}}</h3>
+        <h2>{% if task.done == False %} ⌛ {% else %} ✅ {% endif %}
+        {{task.tittle}}</h2>
 
         <p> {{task.description}} </p>
         <p> Project: {{task.project.name}} </p>
