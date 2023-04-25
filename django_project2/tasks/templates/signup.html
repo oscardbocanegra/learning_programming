@@ -1,4 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
 <h1>Signup</h1>
+
+{{error}}
+
+
 
 <form method="POST">
     {% csrf_token %}
@@ -8,3 +16,5 @@
         Signup
     </button>
 </form>
+
+{% endblock %}
