@@ -43,15 +43,16 @@ def signup(request):
 def tasks(request):
     return render(request, 'tasks.html')
 
-def crate_task(request):
+def create_task(request):
     
     if request.method == 'GET':
         return render(request, 'create_task.html', {
             'form': TaskForm
         })
     else:
-        print(request.POST)
-        return render(request, 'create_taks.html', {
+        form = TaskForm(request.POST)
+        print(form)
+        return render(request, 'create_task.html', {
             'form': TaskForm
         })
 
