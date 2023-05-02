@@ -5,13 +5,13 @@ from django.contrib.auth import login, logout, authenticate
 from django.http import HttpResponse
 from django.db import IntegrityError
 from .forms import TaskForm
+from .models import Task
 
 # Create your views here.
 
 
 def home(request):
     return render(request, 'home.html')
-
 
 def signup(request):
 
@@ -39,9 +39,10 @@ def signup(request):
             "error": 'Password do not match'
         })
 
-
 def tasks(request):
-    return render(request, 'tasks.html')
+    
+    tasks = Task.objects.filter(user = request.user, datecompleted__isnull=True)
+    return render(request, 'tasks.html', {'tasks': tasks})
 
 def create_task(request):
     
@@ -61,12 +62,10 @@ def create_task(request):
             'form': TaskForm,
             'error': 'Please provide valid data'
             })
-            
 
 def signout(request):
     logout(request)
     return redirect('home')
-
 
 def signin(request):
     if request.method == 'GET':
