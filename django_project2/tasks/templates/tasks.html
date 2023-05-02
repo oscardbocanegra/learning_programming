@@ -7,9 +7,14 @@
 
         {% for task in tasks %}
         <li> 
-            <p><b>Title:</b>{{task.title}}</p>
+            {% if task.important %}
+                <strong>Title:{{task.title}}</strong> 
+            {% else %}
+                {{task.title}}
+            {% endif %}
             <p><b>Description:</b> {{task.description}}</p>
             <p><b>User:</b> {{task.user.username}}</p>
+            <p><b>Is important?:</b> {{task.important}}</p>
 
         </li>
         {% endfor %}
