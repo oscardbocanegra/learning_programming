@@ -3,9 +3,11 @@ from flask_mysqldb import MySQL
 
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'user'
+app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'password'
 app.config['MYSQL_DB'] = 'flaskcontacts'
+#app.config['MYSQL_UNIX_SOCKET'] ='/var/lib/mysql/mysql.sock'
+app.config['MYSQL_UNIX_SOCKET'] ='/var/run/mysqld/mysqld.sock'
 mysql = MySQL(app)
 
 @app.route('/')

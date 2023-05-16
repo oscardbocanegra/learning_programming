@@ -11,7 +11,8 @@ services:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: db
       MYSQL_PASSWORD: password2
-
+    ports:
+      - 3306:3306
   phpmyadmin:
     depends_on:
       - db
