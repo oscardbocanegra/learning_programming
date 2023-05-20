@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Django CRUD aplication</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/tasks">Tasks</a>
+                </li>
+                <li>
+                    <a href="/signup">Signup</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        
+        {% block content %}
+        {% endblock %}
+        
+        <script src="" async defer></script>
+    </body>
+</html>
