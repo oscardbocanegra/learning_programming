@@ -15,7 +15,11 @@ def signup(request):
         })
     else:
         if request.POST['password1'] == request.POST['password2']:
-            user = User.objects.create_user(username= request.POST['username'], password=request.POST['password1'])
-            user.save()
-            return HttpResponse ('User created successfuly')
+            try:
+                user = User.objects.create_user(username= request.POST['username'],
+                password=request.POST['password1'])
+                user.save()
+                return HttpResponse ('User created successfuly')
+            except:
+                return HttpResponse('Username already exists')
         return HttpResponse('Password do not match')
