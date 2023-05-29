@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1> Create task </h1>
+    <h1>Create task</h1>
 
-    <from action="/tasks/create/" method="POST">
+    <form action="/tasks/create/" method="POST">
+        {% csrf_token %}
 
         {{form}}
 
@@ -11,5 +12,4 @@
             Save
         </button>
     </form>
-
 {% endblock %}
