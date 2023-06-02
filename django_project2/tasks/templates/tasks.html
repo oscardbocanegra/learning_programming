@@ -14,7 +14,8 @@
                 {% endif %}
                     <p>{{task.description}}</p>
                     <p>{{task.user.username}}</p>
-                    <p>{{task.important}}</p>
+                    
+                    <p>{{task.description|date:'M j Y:i'}}</p>
             </a>
         </li>
         {% endfor %}
