@@ -1,6 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>home</h1>
-    <p>{% lorem 10 random %}</p>
+
+<main class="container py-5">
+    <section class="card card-body">
+        <h1 class="display-1 text-center">Django App</h1>
+        <p>This is a new personal project using Django Framework, 
+            this is becasue I'm learning this new framework</p>
+        <div class="text-center">
+            <a class="btn btn-primary" href="/signin/">
+                Signin
+            </a>
+            <a class="btn btn-primary" href="/signup/">
+                Signup
+            </a>
+        </div>
+    </section>
+</main>
+    
+    
 {% endblock %}
