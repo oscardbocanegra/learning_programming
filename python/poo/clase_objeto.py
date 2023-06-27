@@ -33,10 +33,3 @@ cuenta.retirar(200)
 
 cuenta.consultar_saldo()  
     
-print("-----------------------------------")
-
-persona = CuentaBancaria("Oscar Bocanegra", 10000000)
-persona.consultar_saldo()
-persona.depositar(1)
-persona.retirar(50000)
-persona.consultar_saldo()
