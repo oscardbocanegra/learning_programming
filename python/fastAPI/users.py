@@ -4,16 +4,17 @@ from pydantic import BaseModel
 app = FastAPI()
 
 class User(BaseModel):
+    id: int
     name: str
     lastname: str
     url: str
     age: int
     
-users_list = [User(name = "Oscar", lastname = "Bocanegra", url = "https://github.com/oscardbocanegra", age = 19 ), 
-              User(name = "David", lastname = "Capera", url = "https://github.com/davidcapera", age = 22),
-              User(name = "Juan", lastname = "Lopez", url = "https://github.com/juanlopez", age = 45)]
+users_list = [User(id = 1 ,name = "Oscar", lastname = "Bocanegra", url = "https://github.com/oscardbocanegra", age = 19 ), 
+              User(id = 2, name = "David", lastname = "Capera", url = "https://github.com/davidcapera", age = 22),
+              User(id = 3, name = "Juan", lastname = "Lopez", url = "https://github.com/juanlopez", age = 45)]
 
-@app.get("/usersjson")
+@app.get("/usersj son")
 async def usersjson():
     return [{"name": "Oscar", "lastname": "Bocanegra", "url" : "https://github.com/oscardbocanegra", "age":19},
             {"name": "David", "lastname": "Capera", "url" : "https://github.com/davidcapera", "age":22},
@@ -23,3 +24,19 @@ async def usersjson():
 @app.get("/users")
 async def users():
     return users_list
+
+@app.get("/users/{id}")
+async def user(id: int):
+    users = filter(lambda user: user.id == id, users_list) 
+    try:
+        return list(users)[0]
+    except:
+        return {"error": "No se ha encontrado el usuario"}
+    
+@app.get("/userquery/")
+async def user(id: int):
+    users = filter(lambda user: user.id == id, users_list) 
+    try:
+        return list(users)[0]
+    except:
+        return {"error": "No se ha encontrado el usuario"}
