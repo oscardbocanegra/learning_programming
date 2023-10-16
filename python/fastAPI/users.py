@@ -34,7 +34,7 @@ async def user(id: int):
     return search_user(id)
 
 
-@app.post("/user/", status_code=201)    
+@app.post("/user/", response_model=User ,status_code=201)    
 async def user(user: User): 
     if type(search_user(user.id)) == User:
         raise HTTPException(status_code=404, detail="El usuario ya existe")   
