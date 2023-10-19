@@ -25,10 +25,6 @@ async def usersjson():
 async def users():
     return users_list
 
-@router.get("/prueba")
-async def prueba():
-    return "Todo ok"
-
 @router.get("/user/{id}")
 async def user(id: int):
     return search_user(id)
