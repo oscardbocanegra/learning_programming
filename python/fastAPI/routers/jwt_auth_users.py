@@ -63,4 +63,4 @@ async def login(form: OAuth2PasswordRequestForm = Depends()):
     access_token = {"sub": user.username,
                     "exp": datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_DURATION)}
 
-    return {"access_token": access_token, "token_type": "bearer"}
+    return {"access_token": jwt.encode(access_token, algorithm=ALGORITHM), "token_type": "bearer"}
