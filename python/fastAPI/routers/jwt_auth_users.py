@@ -17,7 +17,6 @@ oauth2 = OAuth2PasswordBearer(tokenUrl="login")
 
 crypt = CryptContext(schemes=["bcrypt"])
 
-app = FastAPI()
 class User(BaseModel):
     username: str
     full_name: str

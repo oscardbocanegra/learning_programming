@@ -6,6 +6,8 @@ router = APIRouter(prefix="/basicauth",
                    tags=["basicauth"],
                    responses={status.HTTP_404_NOT_FOUND: {"message": "No encontrado"}})
 
+router = APIRouter()
+
 oauth2 = OAuth2PasswordBearer(tokenUrl="login")
 
 
