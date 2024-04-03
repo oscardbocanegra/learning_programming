@@ -98,4 +98,14 @@ if($my_int == 11 && $my_string == "Hola") {
 } else {
     echo "El valor no es 11 \n";
 }
+
+// FUNCIONES
+
+function print_number (int $my_number) {
+    echo $my_number . "\n";
+}
+
+print_number(10);
+print_number(11);
+print_number(12);
 ?>
