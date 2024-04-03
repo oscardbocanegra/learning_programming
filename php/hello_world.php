@@ -50,9 +50,52 @@ echo "El valor de mi integer es $my_int y el de mi boolean es $my_bool". "\n";
 const MY_CONSTANT = "El valor de la constante" . "\n";
 echo MY_CONSTANT . "\n"; 
 
+
+//LISTAS
 $my_array = [$my_string, $my_int, $my_doble];
 echo gettype($my_array) . "\n";
 echo $my_array[0] . "\n";
 array_push($my_array, $my_bool);
 print_r($my_array);
+
+
+//DICCIONARIO
+$my_dict = array("string" => $my_string, "int" => $my_int, "bool" => $my_bool);
+echo gettype($my_dict) . "\n";
+print_r($my_dict) . "\n";
+echo $my_dict["int"] . "\n";
+
+
+//SET
+
+array_push($my_array, "Brais");
+array_push($my_array, "Brais");
+print_r($my_array);
+print_r(array_unique($my_array));
+
+//FLUJOS
+for ($index = 0; $index <= 10; $index++) {
+    echo $index . "\n";
+}
+
+foreach ($my_array as $my_item) {
+    echo $my_item . "\n";
+}
+
+$index = 0;
+while ($index <= sizeof($my_array)-1) {
+    echo $my_array[$index] . "\n";
+    $index++;
+}
+
+$my_int = 13;
+$my_string = "Hola";
+
+if($my_int == 11 && $my_string == "Hola") {
+    echo "El valor es 11 \n";
+} elseif($my_int == 12 ||  $my_string == "Hola") {
+    echo "El valor es 12 \n";
+} else {
+    echo "El valor no es 11 \n";
+}
 ?>
