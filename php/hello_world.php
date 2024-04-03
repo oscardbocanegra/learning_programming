@@ -108,4 +108,21 @@ function print_number (int $my_number) {
 print_number(10);
 print_number(11);
 print_number(12);
+
+
+// CLASES
+
+class MyClass {
+    public $name;
+    public $age;
+
+    function __construct($name, $age)
+    {
+        $this->name = $name;
+        $this->age = $age;
+    }
+}
+
+$my_class = new MyClass("David", 20);
+print_r($my_class)
 ?>
