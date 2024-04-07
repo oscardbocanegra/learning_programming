@@ -124,5 +124,9 @@ class MyClass {
 }
 
 $my_class = new MyClass("David", 20);
-print_r($my_class)
+$my_class1 = new MyClass("Oscar", 21);
+$my_class2 = new MyClass("Juan", 17);
+print_r($my_class);
+print_r($my_class1);
+print_r($my_class2)
 ?>
