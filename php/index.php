@@ -1,24 +1,28 @@
 <?php
 $name = "David";
 $isDev = true;
-$age = 44;
+$age = 20;
 
-var_dump($name);
-var_dump($isDev);
-var_dump($age);
+//TYPES
 
-gettype($name);
-gettype($isDev);
-gettype($age);
+// var_dump($name);
+// var_dump($isDev);
+// var_dump($age);
 
-is_string($name);
-is_bool($isDev);
-is_int($age);
+// gettype($name);
+// gettype($isDev);
+// gettype($age);
+
+// is_string($name);
+// is_bool($isDev);
+// is_int($age);
+
+$output = "Hola \"$name\", con una edad de $age";
 ?>
 
 
 <h1>
-    <?= "Hola " . $name; ?>
+    <?= $output; ?>
 </h1>
 
 <style>
