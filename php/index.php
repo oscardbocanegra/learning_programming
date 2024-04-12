@@ -18,6 +18,9 @@ $age = 20;
 // is_int($age);
 
 $output = "Hola \"$name\", con una edad de $age";
+
+//CONSTANTES
+const NOMBRE = "Oscar";  
 ?>
 
 
