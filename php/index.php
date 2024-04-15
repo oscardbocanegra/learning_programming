@@ -28,11 +28,19 @@ $output_age = match (true) {
     default => "Ya eres más adulto que todos $name"
 };
 
-
+$bestLanguages = ["PHP", "JavaScript", "Python"];
+$bestLanguages[] = "Java";
+$bestLanguages[] = "TypeScript";
 
 //CONSTANTES
 //const NOMBRE = "Oscar";  
 ?>
+
+<ul>
+    <?php foreach($bestLanguages as $languege) : ?>
+        <li> <?= $languege ?> </li>
+    <?php endforeach ?>
+</ul>
 
 
 <h1>
@@ -42,6 +50,10 @@ $output_age = match (true) {
 <h2>
 <?= $output_age; ?>
 </h2>
+
+<h3>
+    El mejor lenguaje es <?=  $bestLanguages[4] ?>
+</h3>
 
 <style>
     :root {
