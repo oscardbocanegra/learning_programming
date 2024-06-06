@@ -20,3 +20,20 @@ def average(numbers: List[int]) -> float :
 scores: List[int] = [10,10,8,8,8,7]
 result: float =average(scores)
 print(f"The average is {result}")
+
+
+#UNION
+
+from typing import Union, List
+
+def average(numbers: List[int]) -> Union[None, float]:
+    
+    if len (numbers) == 0:
+        return None
+    
+    return sum(numbers) / len(numbers)
+
+numbers = [1, 2]
+result: Union[None, float] = average(numbers)
+
+print(result)
