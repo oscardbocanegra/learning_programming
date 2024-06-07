@@ -51,3 +51,19 @@ def make_user (username: str, email:str ):
 david: User = make_user("DavidBC", "davidbocanegrac@gmail.com")
 print(david.username)
 print(david.email)
+
+#Tipos NamedTuple
+from typing import NamedTuple
+
+class DataBaseSettings(NamedTuple):
+    username: str
+    password: str
+    part: int
+    database: str
+    
+data_base_config_1 = DataBaseSettings(
+    'root',
+    'password1234',
+    8080,
+    'superoot'
+)
