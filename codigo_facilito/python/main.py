@@ -33,7 +33,21 @@ def average(numbers: List[int]) -> Union[None, float]:
     
     return sum(numbers) / len(numbers)
 
-numbers = [1, 2]
+numbers = [1, 2, 3, 4]
 result: Union[None, float] = average(numbers)
 
 print(result)
+
+# CLASES
+
+class User:
+    def __init__(self, username: str, email: str):
+        self.username = username
+        self.email = email
+        
+def make_user (username: str, email:str ):
+    return User(username, email)
+
+david: User = make_user("DavidBC", "davidbocanegrac@gmail.com")
+print(david.username)
+print(david.email)
