@@ -13,3 +13,13 @@ for(let i = 0; i<arreglo.length; i++){
 let lenguajes = ["JavaScript", "Python", "Java"];
 
 lenguajes.forEach(function(lenguaje){console.log(lenguaje);})
+
+//Reducir un arreglo a solo un elemento
+
+let nombres = ["David", "Bocanegra"];
+
+let html = nombres.reduce(function(acc, nombre){
+    return acc + "<li>" + nombre + "</li>"
+})
+
+console.log(html);
