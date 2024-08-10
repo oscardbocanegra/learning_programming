@@ -70,3 +70,6 @@ class Admin extends User{
 
 let admin = new Admin("David")
 console.log(admin.name)
+
+
+
