@@ -53,5 +53,7 @@ VALUES  (1, 'Carrie', '1974-01-01'),
 
 ALTER TABLE libros ADD ventas INT UNSIGNED NOT NULL;
 
+--using the sentence WHERE
+
 SELECT * FROM autores;
 SELECT * FROM libros;
