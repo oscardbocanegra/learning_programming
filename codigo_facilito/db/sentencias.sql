@@ -37,6 +37,8 @@ CREATE TABLE libros(
     FOREIGN KEY (autor_id) REFERENCES autores(autor_id)
 );
 
+
+
 INSERT INTO autores (nombre, apellido, seudonimo, genero, fecha_nacimiento, pais_origen)
 VALUES  ('Stephen', 'King', 'Richard Bachman', 'M', '2003-08-30', 'USA'),
         ('Mark', 'Mandon', 'MK', 'M', '1988-03-03', 'Mexico');
@@ -48,6 +50,8 @@ VALUES  (1, 'Carrie', '1974-01-01'),
         (2, 'The subtle art of not giving a fuck', '2016-01-01'),
         (2, 'Will', '2021-01-01'),
         (2, 'Everything is fucked', '2024-01-01');
+
+ALTER TABLE libros ADD ventas INT UNSIGNED NOT NULL;
 
 SELECT * FROM autores;
 SELECT * FROM libros;
