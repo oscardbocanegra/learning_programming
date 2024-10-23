@@ -64,3 +64,6 @@ SELECT * FROM libros;
 SELECT * FROM libros WHERE titulo = 'Will' AND autor_id = 1 AND ventas = 0;
 SELECT * FROM libros WHERE titulo = 'Carrie' OR autor_id = 1 OR ventas = 10;
 SELECT * FROM libros WHERE (autor_id = 2 AND titulo= 'Carrie') OR (autor_id = 2 AND titulo = 'Will');
+
+-- The next structure is the structure of searching by strings
+SELECT * FROM libros WHERE titulo LIKE 'Will%';
